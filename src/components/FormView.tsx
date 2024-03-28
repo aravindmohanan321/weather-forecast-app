@@ -29,7 +29,7 @@ function FormView({ city, message, setCity, setErrorMessage, handleFormSubmit }:
             <span>Or</span>
           </h6>
         </div>
-        <button type="submit">Get Weather</button>
+        <button type="submit">Get Device Location</button>
         <div id="fail">
           <p>{message}</p>
         </div>
