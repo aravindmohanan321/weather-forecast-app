@@ -1,5 +1,5 @@
 import React from 'react';
-import { WeatherData } from '../interfaces';
+import { WeatherData } from '../interface';
 import Clear from '../assets/Clear.png';
 import Clouds from '../assets/Clouds.png';
 import Fog from '../assets/Fog.png';

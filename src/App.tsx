@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { PulseLoader } from 'react-spinners';
 import './App.css';
-import { fetchWeatherDetails } from './services';
+import { fetchWeatherDetails } from './service';
 import FormView from './components/FormView';
 import WeatherView from './components/WeatherView';
-import { WeatherData } from './interfaces';
+import { WeatherData } from './interface';
 
 function App(): React.ReactElement {
   const [city, setCity] = useState('');
