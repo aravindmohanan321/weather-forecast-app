@@ -18,6 +18,7 @@ function FormView({ city, message, setCity, setErrorMessage, handleFormSubmit }:
           name="city"
           placeholder="Enter city name"
           value={city}
+          maxLength={25}
           onChange={(e) => {
             setErrorMessage('');
             setCity(e.target.value);
