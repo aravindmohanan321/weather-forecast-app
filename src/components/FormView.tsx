@@ -21,7 +21,7 @@ function FormView({ city, message, setCity, setErrorMessage, handleFormSubmit }:
           maxLength={25}
           onChange={(e) => {
             setErrorMessage('');
-            setCity(e.target.value);
+            setCity(e.target.value.trim());
           }}
         />
         <div className="text-line-container">
@@ -29,6 +29,7 @@ function FormView({ city, message, setCity, setErrorMessage, handleFormSubmit }:
             <span>Or</span>
           </h6>
         </div>
+        <div className="mb-3"></div>
         <button type="submit">Get Device Location</button>
         <div id="fail">
           <p>{message}</p>

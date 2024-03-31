@@ -77,6 +77,11 @@ function WeatherView({ weatherData, setWeatherData, setCity }: WeatherProps): Re
     return feelings;
   };
 
+  const getCountry = () => {
+    const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });
+    return regionNames.of(weatherData?.sys?.country as string);
+  };
+
   const renderTitlePortion = (): React.JSX.Element => (
     <div className="title-container">
       <div
@@ -105,7 +110,8 @@ function WeatherView({ weatherData, setWeatherData, setCity }: WeatherProps): Re
         <div className="location-icon">
           <LocationIcon height="20" />
         </div>
-        {weatherData?.name}
+        {weatherData?.name},&nbsp;
+        {getCountry()}
       </div>
     </div>
   );

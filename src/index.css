@@ -33,3 +33,31 @@ body {
 .mt-3 {
   margin-top: 12px;
 }
+
+.mb-3 {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 275px) {
+  .weather-container {
+    height: fit-content;
+    margin: 0 15px;
+  }
+  .temp-section-bordr {
+    border-bottom: 1px solid #dfe1e6;
+    border-right: none; /* Remove border-right for screens less than or equal to 270px */
+    width: 100%;
+    padding: 10px 50px;
+  }
+  .temp-section {
+    width: 100%;
+    padding: 10px 50px;
+  }
+}
+
+@media (max-height: 300px) {
+  .weather-container {
+    width: fit-content;
+    background-color: #fff;
+  }
+}
