@@ -17,14 +17,52 @@ To Run the application locally please follow the commands:
 
 Npm
 
-```js
+```
 npm install
 npm run dev
 ```
 
 Yarn
 
-```js
+```
 yarn install
 yarn run dev
 ```
+
+## Project Folder and File Structure
+
+    .
+    ├── build                   # Compiled files (alternatively `dist`)
+    ├── public
+    ├── src                     # Source files
+        ├── assets                     # Folder for image assets
+            ├── Clear.png
+            ├── Clouds.png
+            ├── Fog.png
+            ├── Haze.png
+            ├── Mist.png
+            ├── Rain.png
+            ├── Smoke.png
+        ├── components                 # Folder React components
+            ├── FormView.tsx               # Component for FormView
+            ├── Icons.tsx                  # Component for Icons used
+            ├── WeatherView.tsx            # Component for WeatherView
+        ├── interface                  # Folder typings
+            ├── index.ts
+        ├── service                    # Folder for API services
+            ├── index.ts
+        ├── App.css                    # Main css file
+        ├── App.tsx
+        ├── index.css
+        ├── main.tsx
+        ├── vite-env.d.ts
+    ├── .eslintrc.cjs           # Configuration for es-lint
+    ├── .gitignore
+    ├── .prettierrc             # Configuration of prettier for formatting code
+    ├── index.html
+    ├── package.json
+    ├── package-lock.json
+    ├── tsconfig.json
+    ├── tsconfig.node.json
+    ├── vite.config.ts           # Configuration for vite
+    └── README.md
