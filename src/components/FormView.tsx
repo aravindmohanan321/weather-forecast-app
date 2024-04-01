@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface FormProps {
   city: string;
@@ -9,6 +9,17 @@ interface FormProps {
 }
 
 function FormView({ city, message, setCity, setErrorMessage, handleFormSubmit }: FormProps): React.ReactElement {
+  const [buttonText, setButtonText] = useState('');
+
+  useEffect(() => {
+    // Update the button text when the city prop changes
+    if (!city) {
+      setButtonText('Get Device Location');
+    } else {
+      setButtonText('Get Weather');
+    }
+  }, [city]);
+
   return (
     <div className="form-container">
       <h3>Weather App</h3>
@@ -30,7 +41,7 @@ function FormView({ city, message, setCity, setErrorMessage, handleFormSubmit }:
           </h6>
         </div>
         <div className="mb-3"></div>
-        <button type="submit">Get Device Location</button>
+        <button type="submit">{buttonText}</button>
         <div id="fail">
           <p>{message}</p>
         </div>
