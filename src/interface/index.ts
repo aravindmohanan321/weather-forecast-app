@@ -44,3 +44,9 @@ export interface WeatherData {
   name: string;
   cod: number;
 }
+
+export interface PayloadData {
+  city?: string;
+  lat?: string;
+  long?: string;
+}
