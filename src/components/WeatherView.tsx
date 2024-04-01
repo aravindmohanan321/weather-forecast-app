@@ -124,7 +124,7 @@ function WeatherView({ weatherData, setWeatherData, setCity }: WeatherProps): Re
           <div className="temp-section-text">
             <strong>{getMinTemperature()}°C Min</strong>
             <strong>{getMaxTemperature()}°C Max</strong>
-            <p>Feels like</p>
+            <p>Temperature</p>
           </div>
         </div>
       </div>
